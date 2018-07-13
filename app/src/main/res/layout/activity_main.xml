@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/box_style"
+        android:id="@+id/box1"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_toStartOf="@id/box2"
+        android:layout_above="@id/box4"
+        android:layout_margin="5dp"
+        android:gravity="center"
+  />
+
+    <TextView
+        style="@style/box_style"
+        android:id="@+id/box2"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/box5"
+        android:layout_margin="5dp"
+        android:gravity="center"
+     />
+
+    <TextView
+        android:id="@+id/box3"
+        style="@style/box_style"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/box6"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@id/box2"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/box4"
+        style="@style/box_style"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@id/box5"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/box5"
+        style="@style/box_style"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:gravity="center" />
+
+    <TextView
+        style="@style/box_style"
+        android:id="@+id/box6"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_toEndOf="@id/box5"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/box7"
+        style="@style/box_style"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/box4"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@id/box8"
+        android:gravity="center" />
+
+    <TextView
+        style="@style/box_style"
+        android:id="@+id/box9"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_toEndOf="@id/box8"
+        android:layout_below="@id/box6"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/box8"
+        style="@style/box_style"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/box5"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        android:textSize="35sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:onClick="restartGame"
+        android:text="restart" />
+</RelativeLayout>
