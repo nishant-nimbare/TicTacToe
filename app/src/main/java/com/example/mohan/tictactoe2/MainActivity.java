@@ -2,6 +2,7 @@ package com.example.mohan.tictactoe2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,20 +33,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        counter++;
+
         TextView box = boxes[Integer.parseInt(view.getTag().toString())];
 
         if(box.getText().toString().length()==0 && (!gameOver)) {
+
+            counter++;
 
             if (counter % 2 == 0) {
                 box.setText("0");
             } else {
                 box.setText("X");
             }
-        }else {
-            counter--;
-        }
+
+            Log.e("counter",Integer.toString(counter));
         checkWinner();
+        }
     }
 
     public void checkWinner() {
@@ -92,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             gameOver=true;
 
         }else if (counter==9){
+            result.setVisibility(View.VISIBLE);
             result.setText("its a tie");
         }
 
@@ -107,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         result.setText("");
         result.setVisibility(View.INVISIBLE);
         counter=0;
-
+        gameOver=false;
     }
 
 }
